@@ -21,6 +21,14 @@ function ProjectsTab() {
           An options trading journal — CSV import, position reconciliation
           and P&amp;L analytics.
         </p>
+        <a
+          className="pill entry__pill"
+          href="https://github.com/erikwoon/options-tracker"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View Code ↗
+        </a>
       </article>
 
       <article className="entry reveal">
@@ -39,6 +47,14 @@ function ProjectsTab() {
         <p className="entry__desc">
           An Android app for natural-language music discovery.
         </p>
+        <a
+          className="pill entry__pill"
+          href="https://github.com/erikwoon/music-finder"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View Code ↗
+        </a>
       </article>
 
       <article className="entry reveal">
