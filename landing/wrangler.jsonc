@@ -1,5 +1,5 @@
 {
-	"name": "starcandy-portfolio",
+	"name": "homepage-worker",
 	"compatibility_date": "2026-09-08",
 	"main": "worker/index.ts",
 	"assets": {
