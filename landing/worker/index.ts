@@ -37,6 +37,7 @@ export default {
     headers.set('Content-Type', CONTENT_TYPES[ext] ?? 'application/octet-stream');
     headers.set('Cache-Control', 'public, max-age=31536000, immutable');
     headers.set('ETag', object.httpEtag);
+    headers.set('X-Content-Type-Options', 'nosniff');
 
     return new Response(object.body, { headers });
   },
