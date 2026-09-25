@@ -8,9 +8,40 @@ function ProjectsTab() {
     >
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="badge badge--amber" aria-hidden="true">
-            OT
-          </span>
+          <span className="dot dot--amber" aria-hidden="true" />
+          <div className="entry__heading">
+            <span className="entry__title">Blackjack Trainer</span>
+            <span className="entry__meta">React · TypeScript</span>
+          </div>
+          <span className="status status--done">Complete</span>
+        </div>
+        <p className="entry__desc">
+          Practice hit/stand/double decisions against basic strategy, graded
+          in real time. The strategy chart is cross-checked against an
+          independent expected-value solver rather than just asserted
+          correct.
+        </p>
+        <a
+          className="pill entry__pill"
+          href="https://landing.starcandy.org/projects/blackjack"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View Live ↗
+        </a>
+        <a
+          className="pill entry__pill"
+          href="https://github.com/erikwoon/blackjack-trainer"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View Code ↗
+        </a>
+      </article>
+
+      <article className="entry reveal">
+        <div className="entry__header">
+          <span className="dot dot--amber" aria-hidden="true" />
           <div className="entry__heading">
             <span className="entry__title">Options Tracker</span>
             <span className="entry__meta">React · TypeScript · Supabase</span>
@@ -33,9 +64,7 @@ function ProjectsTab() {
 
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="badge badge--teal" aria-hidden="true">
-            MF
-          </span>
+          <span className="dot dot--teal" aria-hidden="true" />
           <div className="entry__heading">
             <span className="entry__title">Music Finder</span>
             <span className="entry__meta">
@@ -59,34 +88,13 @@ function ProjectsTab() {
 
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="badge badge--amber" aria-hidden="true">
-            PT
-          </span>
-          <div className="entry__heading">
-            <span className="entry__title">Penetration Testing Reports</span>
-            <span className="entry__meta">
-              Nmap · Burp Suite · Wireshark · Metasploit
-            </span>
-          </div>
-          <span className="status status--done">Complete</span>
-        </div>
-        <p className="entry__desc">
-          Vulnerability assessments across virtualised environments.
-        </p>
-      </article>
-
-      <article className="entry reveal">
-        <div className="entry__header">
-          <span className="badge badge--teal" aria-hidden="true">
-            CTI
-          </span>
+          <span className="dot dot--teal" aria-hidden="true" />
           <div className="entry__heading">
             <span className="entry__title">
-              National Security Implications of Contemporary
-              Geo-politics and Threat Intelligence
+              National Security Implications of Contemporary Geo-politics and Threat Intelligence
             </span>
             <span className="entry__meta">
-              RMIT · Industry Awareness Project · co-authored, Team 17
+              RMIT University · Industry Awareness Project
             </span>
           </div>
         </div>

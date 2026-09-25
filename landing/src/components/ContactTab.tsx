@@ -27,9 +27,7 @@ function ContactTab() {
 
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="badge badge--teal" aria-hidden="true">
-            SEC
-          </span>
+          <span className="dot dot--teal" aria-hidden="true" />
           <div className="entry__heading">
             <span className="entry__title">This site is hardened</span>
             <span className="entry__meta">source in the repo below</span>

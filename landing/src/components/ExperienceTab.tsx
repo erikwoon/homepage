@@ -8,9 +8,7 @@ function ExperienceTab() {
     >
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="badge badge--teal" aria-hidden="true">
-            TH
-          </span>
+          <span className="dot dot--teal" aria-hidden="true" />
           <div className="entry__heading">
             <span className="entry__title">
               Security Analyst Level 1 (SAL1)
@@ -35,9 +33,7 @@ function ExperienceTab() {
 
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="badge badge--amber" aria-hidden="true">
-            BC
-          </span>
+          <span className="dot dot--amber" aria-hidden="true" />
           <div className="entry__heading">
             <span className="entry__title">Beecity Australia</span>
             <span className="entry__meta">Mar 2026 – Jun 2026</span>
@@ -59,9 +55,7 @@ function ExperienceTab() {
 
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="badge badge--teal" aria-hidden="true">
-            RM
-          </span>
+          <span className="dot dot--teal" aria-hidden="true" />
           <div className="entry__heading">
             <span className="entry__title">RMIT University</span>
             <span className="entry__meta">2024 – 2026</span>
@@ -76,9 +70,7 @@ function ExperienceTab() {
 
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="badge badge--teal" aria-hidden="true">
-            RM
-          </span>
+          <span className="dot dot--teal" aria-hidden="true" />
           <div className="entry__heading">
             <span className="entry__title">Monash University</span>
             <span className="entry__meta">2021 – 2024</span>
