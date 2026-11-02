@@ -61,15 +61,32 @@ function App() {
 
   return (
     <main className="layout">
-      <aside className="sidebar">
-        <div className="intro__top">
-          <img
-            className="portrait"
-            src="/profilephoto.jpeg"
-            alt="Portrait of Erik Woon"
-            width="150"
-            height="150"
-          />
+      <header className="hero">
+        <img
+          className="portrait"
+          src="/profilephoto.jpeg"
+          alt="Portrait of Erik Woon"
+          width="150"
+          height="150"
+        />
+
+        <div className="hero__text">
+          <h1 className="hero__name">Erik Woon</h1>
+          <p className="hero__role">Software &amp; cybersecurity engineer · Melbourne</p>
+          <p className="bio">
+            Previously an infrastructure security intern at{' '}
+            <strong>Beecity Australia</strong>, hardening authentication and
+            access control. Currently building projects to improve skills in software development, cybersecurity
+            and data analytics.
+          </p>
+
+          <dl className="now">
+            <div className="now__row">
+              <dt>building</dt>
+              <dd><strong>Data Analytics Project</strong> - FastF1 API, dashboards &amp; visualisations</dd>
+            </div>
+          </dl>
+        </div>
 
           <div className="terminal" aria-hidden="true">
             <p className="terminal__line">
@@ -82,7 +99,7 @@ function App() {
               <span className="terminal__prompt">$</span> status
             </p>
             <p className="terminal__line terminal__line--out">
-              open to full-time roles<span className="terminal__cursor" />
+              Open to full-time roles in software engineering, cybersecurity or data analytics<span className="terminal__cursor" />
             </p>
 
             <div className="dirlist" aria-hidden="true">
@@ -111,28 +128,7 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
-
-        <p className="bio">
-          I'm Erik, an aspiring software engineer and cybersecurity analyst based in
-          Melbourne, Australia.
-        </p>
-        <p className="bio">
-          Previously, I was an infrastructure security intern at{' '}
-          <strong>Beecity Australia</strong>, working on SafeCapitAI,
-          a unified risk-intelligence platform for investors to view and analyze their portfolios.
-          My work focused on hardening authentication flows, safeguarding sensitive data,
-          and implementing robust access control measures.
-        </p>
-        <p className="bio">
-          At the moment, I am building my skills in software engineering, cybersecurity, and data analytics through personal projects. Recently I have completed building a <strong>Blackjack Trainer</strong> web application, which allows users to practice blackjack strategy and receive real-time feedback on their decisions.
-          I am also currently working on a <strong>Data Analytics Project</strong> that leverages the FastF1 API to fetch and analyse Formula 1 data. This project utilises a combination of React, Python, SQL, Supabase, and Tableau to provide insights through interactive dashboards and visualisations.
-        </p>
-        <p className="bio">
-          I'm currently looking for full-time opportunities in the IT industry, ideally priortising software engineering, cybersecurity or data analytics roles.
-        </p>
-
-      </aside>
+      </header>
 
       <div className="content" ref={contentRef}>
       <nav className="tabs" role="tablist" aria-label="Sections">

@@ -30,7 +30,6 @@ function ContactTab() {
           <span className="dot dot--teal" aria-hidden="true" />
           <div className="entry__heading">
             <span className="entry__title">This site is hardened</span>
-            <span className="entry__meta">source in the repo below</span>
           </div>
         </div>
         <p className="entry__desc">
@@ -47,16 +46,8 @@ function ContactTab() {
           </a>{' '}
           (RFC 9116) for responsible disclosure, and immutable-cached,
           R2-backed image delivery through a purpose-built Cloudflare
-          Worker that only ever sees the one route it needs to.
+          Worker.
         </p>
-        <a
-          className="pill entry__pill"
-          href="https://github.com/erikwoon/homepage"
-          target="_blank"
-          rel="noreferrer"
-        >
-          View Source ↗
-        </a>
       </article>
     </section>
   );

@@ -37,7 +37,16 @@ export default {
     headers.set('Content-Type', CONTENT_TYPES[ext] ?? 'application/octet-stream');
     headers.set('Cache-Control', 'public, max-age=31536000, immutable');
     headers.set('ETag', object.httpEtag);
+    // Mirror public/_headers, which only applies to static assets and so
+    // never reaches responses produced by this Worker.
     headers.set('X-Content-Type-Options', 'nosniff');
+    headers.set('X-Frame-Options', 'DENY');
+    headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+    headers.set('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
+    headers.set(
+      'Content-Security-Policy',
+      "default-src 'none'; frame-ancestors 'none'",
+    );
 
     return new Response(object.body, { headers });
   },

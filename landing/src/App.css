@@ -18,6 +18,12 @@
   box-sizing: border-box;
 }
 
+/* Reserve the scrollbar gutter so the centered column doesn't shift
+   sideways between short tabs (Contact) and long ones (Photos). */
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -27,47 +33,41 @@ body {
 }
 
 .layout {
-  max-width: 640px;
+  max-width: 880px;
   margin: 0 auto;
-  padding: 5.5rem 2rem 6rem;
+  padding: 4.5rem 2rem 6rem;
 }
 
-/* Above ~900px there's room to stop stacking everything in one narrow
-   column: the profile becomes a sticky sidebar next to the scrolling
-   content, so the page actually uses the width instead of floating a
-   phone-width column in the middle of the screen. */
-@media (min-width: 900px) {
-  .layout {
-    max-width: 1040px;
-    display: grid;
-    grid-template-columns: 300px minmax(0, 1fr);
-    gap: 4.5rem;
-    align-items: start;
-  }
-}
+/* ---- Hero ---- */
 
-/* ---- Sidebar ---- */
-
-.sidebar {
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
   opacity: 0;
   animation: fade-up 0.5s ease-out 0.1s forwards;
-  margin-bottom: 3rem;
 }
 
-@media (min-width: 900px) {
-  .sidebar {
-    position: sticky;
-    top: 5.5rem;
-    margin-bottom: 0;
+.hero__text {
+  min-width: 0;
+}
+
+/* Wide screens: portrait + bio side by side, terminal card beneath the
+   portrait row spanning the text column. */
+@media (min-width: 760px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 1.75rem;
   }
-}
 
-.intro__top {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1.75rem;
+  .hero .terminal {
+    grid-column: 2;
+    justify-self: start;
+  }
 }
 
 .content {
@@ -195,25 +195,30 @@ body {
 
 .tabs {
   display: flex;
-  gap: 1.5rem;
-  margin-bottom: 1.75rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--line);
+  gap: 0.25rem;
+  width: fit-content;
+  margin-bottom: 1.5rem;
+  padding: 0.3rem;
+  border-radius: 999px;
+  background: rgba(236, 237, 238, 0.05);
 }
 
 .tabs__item {
   font: inherit;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-dim);
   background: none;
   border: none;
-  padding: 0;
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
   cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .tabs__item.is-active {
   color: var(--text);
+  background: rgba(236, 237, 238, 0.1);
 }
 
 .tabs__item:hover {
@@ -234,8 +239,10 @@ body {
 }
 
 .entry {
-  padding: 1.1rem 0;
-  border-top: 1px solid var(--line);
+  margin-bottom: 0.6rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: 12px;
+  background: rgba(236, 237, 238, 0.035);
 }
 
 /* ---- Scroll reveal ----
@@ -253,10 +260,6 @@ body {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-.entry:last-of-type {
-  border-bottom: 1px solid var(--line);
 }
 
 .entry__header {
@@ -465,6 +468,7 @@ body {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
+  margin-bottom: 1.75rem;
 }
 
 .pill {
@@ -516,11 +520,6 @@ body {
     padding: 4rem 1.25rem 4.5rem;
   }
 
-  .intro__top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .entry__header {
     flex-wrap: wrap;
   }
@@ -536,7 +535,7 @@ body {
     transition: none !important;
   }
 
-  .sidebar,
+  .hero,
   .panel,
   .reveal {
     opacity: 1;
@@ -546,4 +545,94 @@ body {
   .terminal__cursor {
     opacity: 1;
   }
+}
+
+/* ---- Hero details ---- */
+
+.hero__name {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.hero__role {
+  margin: 0.4rem 0 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.hero__open {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.hero__pulse {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-2);
+  box-shadow: 0 0 0 0 var(--accent-2-dim);
+  animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+  70% { box-shadow: 0 0 0 8px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(236, 237, 238, 0.06);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-dim);
+}
+
+.now {
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.now__row {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.now dt {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  padding-top: 0.15rem;
+}
+
+.now dd {
+  margin: 0;
+  color: var(--text-dim);
+}
+
+.now strong {
+  color: var(--text);
+  font-weight: 600;
 }
