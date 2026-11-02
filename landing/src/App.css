@@ -9,6 +9,8 @@
   --accent-dim: rgba(255, 178, 56, 0.14);
   --accent-2: #5ec8b0;
   --accent-2-dim: rgba(94, 200, 176, 0.16);
+  --pastel-l: 0.78;
+  --pastel-c: 0.16;
 
   --font-sans: 'Google Sans', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
@@ -274,14 +276,6 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-}
-
-.dot--amber {
-  background: var(--accent);
-}
-
-.dot--teal {
-  background: var(--accent-2);
 }
 
 .entry__heading {

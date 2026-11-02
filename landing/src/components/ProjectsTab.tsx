@@ -1,3 +1,4 @@
+import Dot from './Dot';
 function ProjectsTab() {
   return (
     <section
@@ -8,7 +9,7 @@ function ProjectsTab() {
     >
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="dot dot--amber" aria-hidden="true" />
+          <Dot index={0} />
           <div className="entry__heading">
             <span className="entry__title">Blackjack Trainer</span>
             <span className="entry__meta">React · TypeScript</span>
@@ -41,7 +42,7 @@ function ProjectsTab() {
 
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="dot dot--amber" aria-hidden="true" />
+          <Dot index={1} />
           <div className="entry__heading">
             <span className="entry__title">F1 Data Analytics Project using FastF1 API</span>
             <span className="entry__meta">React, Python, SQL, Supabase, Tableau</span>
@@ -65,7 +66,7 @@ function ProjectsTab() {
 
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="dot dot--teal" aria-hidden="true" />
+          <Dot index={2} />
           <div className="entry__heading">
             <span className="entry__title">Music Finder</span>
             <span className="entry__meta">
@@ -89,7 +90,7 @@ function ProjectsTab() {
 
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="dot dot--teal" aria-hidden="true" />
+          <Dot index={3} />
           <div className="entry__heading">
             <span className="entry__title">
               National Security Implications of Contemporary Geo-politics and Threat Intelligence

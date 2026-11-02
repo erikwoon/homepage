@@ -1,3 +1,4 @@
+import Dot from './Dot';
 function ExperienceTab() {
   return (
     <section
@@ -8,7 +9,7 @@ function ExperienceTab() {
     >
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="dot dot--teal" aria-hidden="true" />
+          <Dot index={0} />
           <div className="entry__heading">
             <span className="entry__title">
               Security Analyst Level 1 (SAL1)
@@ -33,7 +34,7 @@ function ExperienceTab() {
 
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="dot dot--amber" aria-hidden="true" />
+          <Dot index={1} />
           <div className="entry__heading">
             <span className="entry__title">Beecity Australia</span>
             <span className="entry__meta">Mar 2026 – Jun 2026</span>
@@ -55,7 +56,7 @@ function ExperienceTab() {
 
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="dot dot--teal" aria-hidden="true" />
+          <Dot index={2} />
           <div className="entry__heading">
             <span className="entry__title">RMIT University</span>
             <span className="entry__meta">2024 – 2026</span>
@@ -70,7 +71,7 @@ function ExperienceTab() {
 
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="dot dot--teal" aria-hidden="true" />
+          <Dot index={3} />
           <div className="entry__heading">
             <span className="entry__title">Monash University</span>
             <span className="entry__meta">2021 – 2024</span>

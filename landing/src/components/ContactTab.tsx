@@ -1,3 +1,4 @@
+import Dot from './Dot';
 function ContactTab() {
   return (
     <section
@@ -27,7 +28,7 @@ function ContactTab() {
 
       <article className="entry reveal">
         <div className="entry__header">
-          <span className="dot dot--teal" aria-hidden="true" />
+          <Dot index={0} />
           <div className="entry__heading">
             <span className="entry__title">This site is hardened</span>
           </div>
