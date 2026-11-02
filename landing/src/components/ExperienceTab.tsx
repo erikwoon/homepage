@@ -14,7 +14,7 @@ function ExperienceTab() {
             <span className="entry__title">
               Security Analyst Level 1 (SAL1)
             </span>
-            <span className="entry__meta">TryHackMe · Issued Feb 2026</span>
+            <span className="entry__meta">TryHackMe, Issued Feb 2026</span>
           </div>
         </div>
         <p className="entry__desc">

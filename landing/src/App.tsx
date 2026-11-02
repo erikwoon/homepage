@@ -88,46 +88,6 @@ function App() {
           </dl>
         </div>
 
-          <div className="terminal" aria-hidden="true">
-            <p className="terminal__line">
-              <span className="terminal__prompt">$</span> whoami
-            </p>
-            <p className="terminal__line terminal__line--out">
-              erik-woon, aspiring software and cybersecurity engineer
-            </p>
-            <p className="terminal__line">
-              <span className="terminal__prompt">$</span> status
-            </p>
-            <p className="terminal__line terminal__line--out">
-              Open to full-time roles in software engineering, cybersecurity or data analytics<span className="terminal__cursor" />
-            </p>
-
-            <div className="dirlist" aria-hidden="true">
-              <p className="terminal__line">
-                <span className="terminal__prompt">$</span> ls ~/interests
-              </p>
-              <div className="dirlist__grid">
-                {[
-                  'coffee',
-                  'travel',
-                  'photography/fujifilm x-t5',
-                  'anime',
-                  'pokemon',
-                  'sports/gym, running',  
-                  'cooking/and subsequently eating',
-                ].map((item) => {
-                  const [name, sub] = item.split('/');
-                  return (
-                    <span className="dirlist__item" key={item}>
-                      {name}
-                      <span className="dirlist__slash">/</span>
-                      {sub && <span className="dirlist__sub">{sub}</span>}
-                    </span>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
       </header>
 
       <div className="content" ref={contentRef}>

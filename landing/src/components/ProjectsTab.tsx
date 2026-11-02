@@ -17,10 +17,7 @@ function ProjectsTab() {
           <span className="status status--done">Complete</span>
         </div>
         <p className="entry__desc">
-          Practice hit/stand/double decisions against basic strategy, graded
-          in real time. The strategy chart is cross-checked against an
-          independent expected-value solver rather than just asserted
-          correct.
+          A web app for practising blackjack strategy with real-time feedback. This project leverages dynamic programming to calculate the expected value of each possible action, allowing players to learn and improve their decision-making skills in blackjack.
         </p>
         <a
           className="pill entry__pill"
