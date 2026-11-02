@@ -12,7 +12,7 @@ function ProjectsTab() {
           <Dot index={0} />
           <div className="entry__heading">
             <span className="entry__title">Blackjack Trainer</span>
-            <span className="entry__meta">React · TypeScript</span>
+            <span className="entry__meta">React, TypeScript</span>
           </div>
           <span className="status status--done">Complete</span>
         </div>
@@ -70,7 +70,7 @@ function ProjectsTab() {
           <div className="entry__heading">
             <span className="entry__title">Music Finder</span>
             <span className="entry__meta">
-              Java · RoomDB · Spotify &amp; ChatGPT APIs
+              Java, RoomDB, Spotify &amp; ChatGPT APIs
             </span>
           </div>
           <span className="status status--done">Complete</span>
@@ -96,7 +96,7 @@ function ProjectsTab() {
               National Security Implications of Contemporary Geo-politics and Threat Intelligence
             </span>
             <span className="entry__meta">
-              RMIT University · Industry Awareness Project
+              RMIT University, Industry Awareness Project
             </span>
           </div>
         </div>
