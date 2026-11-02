@@ -125,22 +125,12 @@ function App() {
           and implementing robust access control measures.
         </p>
         <p className="bio">
-          On the side I'm building{' '}
-          <button
-            type="button"
-            className="inline-link"
-            onClick={() => setActiveTab('projects')}
-          >
-            Options Tracker
-          </button>
-          , a trading journal for options traders, and picking apart CTFs to
-          learn how systems fail.
+          At the moment, I am building my skills in software engineering, cybersecurity, and data analytics through personal projects. Recently I have completed building a <strong>Blackjack Trainer</strong> web application, which allows users to practice blackjack strategy and receive real-time feedback on their decisions.
+          I am also currently working on a <strong>Data Analytics Project</strong> that leverages the FastF1 API to fetch and analyse Formula 1 data. This project utilises a combination of React, Python, SQL, Supabase, and Tableau to provide insights through interactive dashboards and visualisations.
         </p>
         <p className="bio">
-          I'm currently looking for full-time software engineering and
-          security roles.
+          I'm currently looking for full-time opportunities in the IT industry, ideally priortising software engineering, cybersecurity or data analytics roles.
         </p>
-
 
       </aside>
 

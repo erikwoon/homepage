@@ -43,18 +43,19 @@ function ProjectsTab() {
         <div className="entry__header">
           <span className="dot dot--amber" aria-hidden="true" />
           <div className="entry__heading">
-            <span className="entry__title">Options Tracker</span>
-            <span className="entry__meta">React · TypeScript · Supabase</span>
+            <span className="entry__title">F1 Data Analytics Project using FastF1 API</span>
+            <span className="entry__meta">React, Python, SQL, Supabase, Tableau</span>
           </div>
           <span className="status status--progress">In development</span>
         </div>
         <p className="entry__desc">
-          An options trading journal — CSV import, position reconciliation
-          and P&amp;L analytics.
+          A data analytics project that uses a combination of React, Python, SQL, Supabase, and Tableau to analyze and visualize data.
+          This project focuses on leveraging the FastF1 API to fetch and analyze Formula 1 data, and is currently in development.
+ 
         </p>
         <a
           className="pill entry__pill"
-          href="https://github.com/erikwoon/options-tracker"
+          href="https://github.com/erikwoon/data-analytics-project"
           target="_blank"
           rel="noreferrer"
         >
